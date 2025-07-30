@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import bannerImage from "./assets/img/banner.png";
+import bannerImage from "./assets/img/new_banner.png";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,7 +19,7 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/10 via-emerald-700/10 to-teal-900/10 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/50 via-emerald-700/90 to-teal-900/50 z-25"></div>
           <div
             className="absolute inset-0 bg-cover bg-center transform scale-110 animate-slow-zoom"
             style={{ backgroundImage: `url(${bannerImage.src})` }}
