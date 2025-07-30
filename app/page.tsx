@@ -20,16 +20,16 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/50 via-emerald-700/50 to-teal-900/50 z-25"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/50 via-emerald-700/50 to-teal-900/50 z-10"></div>
+          {/* Desktop Image (hidden on screens smaller than md) */}
           <div
-            className="absolute inset-0 bg-cover bg-center transform scale-110 animate-slow-zoom"
-            style={{
-              backgroundImage: `url(${bannerImage.src})`,
-              // Use a different image for smaller screens (mobile)
-              "@media (max-width: 767px)": {
-                backgroundImage: `url(${bannerMobileImage.src})`, // Replace with your mobile image URL
-              },
-            }}
+            className="absolute inset-0 bg-cover bg-center transform scale-110 animate-slow-zoom hidden md:block"
+            style={{ backgroundImage: `url(${bannerImage.src})` }}
+          ></div>
+          {/* Mobile Image (visible only on screens smaller than md) */}
+          <div
+            className="absolute inset-0 bg-cover bg-center transform scale-110 animate-slow-zoom md:hidden"
+            style={{ backgroundImage: `url(${bannerMobileImage.src})` }}
           ></div>
 
           <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8">
